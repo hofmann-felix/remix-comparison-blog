@@ -9,7 +9,8 @@ const StyledNav = styled.nav`
   width: 100%;
   justify-content: space-evenly;
   text-align: center;
-  padding: 4px;
+  padding: 4px 8px;
+  margin: 0 -8px;
 `
 
 const SiteTitle = styled.h1`
