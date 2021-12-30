@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Link} from "@remix-run/react";
+import TestImage from '../../public/images/how-to-optimize-gatsby-url-redirect.png'
 
 const StyledNav = styled.nav`
   background: gray;
@@ -17,11 +18,12 @@ const SiteTitle = styled.h1`
 export const Navigation = () => {
     return (
         <>
+            <img src={TestImage}/>
             <SiteTitle>Remix Blog</SiteTitle>
             <StyledNav>
                 <Link to={'/'}>Home</Link>
                 <Link to={'/blog'}>Blog</Link>
-                <a href='https://github.com/hofmann-felix/remix-blog' target='_blank'>GitHub</a>
+                <a href='https://github.com/hofmann-felix/remix-comparison-blog' target='_blank'>GitHub</a>
                 <a href='https://remix.run/' target='_blank'>remix.run</a>
             </StyledNav>
         </>
