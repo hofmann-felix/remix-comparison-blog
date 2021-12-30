@@ -1,7 +1,7 @@
 import { useLoaderData } from "remix";
 import {Layout} from "~/components/layout";
 import {Navigation} from "~/components/navigation";
-import {getPosts} from "~/util/posts";
+import {getPosts, Post} from "~/util/posts";
 import {Link} from "@remix-run/react";
 import styled from "styled-components";
 import TestImage from "../../../public/images/how-to-optimize-gatsby-url-hero.jpeg";
@@ -43,7 +43,7 @@ const StyledImg = styled.img`
 `
 
 export default function Blog() {
-    const posts = useLoaderData();
+    const posts = useLoaderData<Post[]>();
     return (
         <Layout>
             <Navigation/>
