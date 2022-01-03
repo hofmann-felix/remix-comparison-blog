@@ -11,7 +11,7 @@ import { useContext } from "react";
 import StylesContext from "./StylesContext";
 
 export const meta: MetaFunction = () => {
-  return { title: "New Remix App" };
+  return { title: "Remix Blog" };
 };
 
 export default function App() {

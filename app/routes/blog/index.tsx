@@ -1,4 +1,4 @@
-import { useLoaderData } from "remix";
+import {MetaFunction, useLoaderData} from "remix";
 import {Layout} from "~/components/layout";
 import {Navigation} from "~/components/navigation";
 import {getPosts, Post} from "~/util/posts";
@@ -9,6 +9,12 @@ import TestImage from "../../../public/images/how-to-optimize-gatsby-url-hero.jp
 
 export const loader = () => {
     return getPosts();
+};
+
+export const meta: MetaFunction = () => {
+    return {
+        title: "Overview | Remix Blog",
+    };
 };
 
 const Grid = styled.div`

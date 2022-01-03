@@ -55,7 +55,7 @@ export async function getPost(slug: string) {
     return { slug, html, title: attributes.title };
 }
 
-type NewPost = {
+export type NewPost = {
     title: string;
     slug: string;
     markdown: string;

@@ -1,9 +1,15 @@
-import { useLoaderData } from "remix";
+import {MetaFunction, useLoaderData} from "remix";
 import type { LoaderFunction } from "remix";
-import { getPost} from "~/util/posts";
+import {getPost, NewPost} from "~/util/posts";
 import invariant from "tiny-invariant";
 import {Layout} from "~/components/layout";
 import {Navigation} from "~/components/navigation";
+
+export const meta: MetaFunction = ({data}: { data: NewPost | undefined }) => {
+    return {
+        title: `${data?.title} | Remix Blog`,
+    };
+};
 
 export const loader: LoaderFunction = async ({
                                                  params
