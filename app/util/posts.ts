@@ -13,7 +13,7 @@ export type PostMarkdownAttributes = {
     title: string;
 };
 
-const postsPath = path.join(__dirname, "../../", "posts");
+const postsPath = path.join(__dirname, "../../../../", "posts");
 
 function isValidPostAttributes(
     attributes: any
@@ -22,8 +22,6 @@ function isValidPostAttributes(
 }
 
 export async function getPosts() {
-    console.log("path")
-    console.log(__dirname)
     const dir = await fs.readdir(postsPath);
     return Promise.all(
         dir.map(async filename => {
