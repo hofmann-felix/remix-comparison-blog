@@ -22,6 +22,8 @@ function isValidPostAttributes(
 }
 
 export async function getPosts() {
+    console.log("path")
+    console.log(__dirname)
     const dir = await fs.readdir(postsPath);
     return Promise.all(
         dir.map(async filename => {
