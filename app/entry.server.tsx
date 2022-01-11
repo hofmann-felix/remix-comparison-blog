@@ -1,16 +1,15 @@
-// app/entry.server.tsx
-import ReactDOMServer from "react-dom/server";
-import type { EntryContext } from "remix";
-import { RemixServer } from "remix";
 import { renderToString } from "react-dom/server";
+import { RemixServer } from "remix";
+import type { EntryContext } from "remix";
+import ReactDOMServer from "react-dom/server";
 import { ServerStyleSheet } from "styled-components";
 import StylesContext from "./StylesContext";
 
 export default function handleRequest(
-    request: Request,
-    responseStatusCode: number,
-    responseHeaders: Headers,
-    remixContext: EntryContext
+  request: Request,
+  responseStatusCode: number,
+  responseHeaders: Headers,
+  remixContext: EntryContext
 ) {
   // set up the Styled Components sheet
   const sheet = new ServerStyleSheet();
@@ -31,6 +30,7 @@ export default function handleRequest(
   // Now that we've rendered, we get the styles out of the sheet
   const styles = sheet.getStyleTags();
   sheet.seal();
+
 
   // Finally, we render a second time, but this time we have styles to apply,
   // make sure to pass them to `<StylesContext.Provider value>`

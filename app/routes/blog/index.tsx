@@ -4,7 +4,7 @@ import {Navigation} from "~/components/navigation";
 import {getPosts, Post} from "~/util/posts";
 import {Link} from "@remix-run/react";
 import styled from "styled-components";
-import TestImage from "../../../public/images/how-to-optimize-gatsby-url-hero.jpeg";
+import TestImage from "../../../public/how-to-optimize-gatsby-url-hero.jpeg"
 
 
 export const loader = () => {

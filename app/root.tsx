@@ -7,11 +7,11 @@ import {
   ScrollRestoration
 } from "remix";
 import type { MetaFunction } from "remix";
-import { useContext } from "react";
 import StylesContext from "./StylesContext";
+import {useContext} from "react";
 
 export const meta: MetaFunction = () => {
-  return { title: "Remix Blog" };
+  return { title: "New Remix App" };
 };
 
 export default function App() {
